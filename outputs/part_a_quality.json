@@ -1,0 +1,12 @@
+{
+  "raw_rows": 13084,
+  "duplicate_rows_removed": 775,
+  "invalid_rows_removed": 0,
+  "order_amounts_imputed": 112,
+  "completed_delivery_values_set_missing": 774,
+  "clean_rows": 12309,
+  "completed_rows": 11110,
+  "cancelled_rows": 1199,
+  "clean_customers": 1200,
+  "clean_products": 40
+}
