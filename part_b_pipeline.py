@@ -93,7 +93,7 @@ def cluster_segments(rfm: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, object]
     result["is_premium"] = result["segment_id"].eq(premium_id)
     profile["segment_name"] = profile.index.map({key: value[0] for key, value in names.items()})
     profile["recommended_action"] = profile.index.map({key: value[1] for key, value in names.items()})
-    profile["is_premium"] = profile.index.eq(premium_id)
+    profile["is_premium"] = profile.index == premium_id
     profile.reset_index().to_csv(OUT / "segment_profile.csv", index=False)
     result[["customer_id", "recency", "frequency", "monetary", "segment_id", "segment_name", "is_premium"]].to_csv(
         OUT / "customer_segments.csv", index=False

@@ -1,0 +1,97 @@
+{
+  "privacy": {
+    "email": 55,
+    "phone": 91,
+    "order_id": 132,
+    "total_substitutions": 278,
+    "remaining_matches": 0,
+    "tickets": 164
+  },
+  "zero_shot": {
+    "prompt": "zero_shot",
+    "tickets": 164,
+    "classified": 147,
+    "accuracy_classified": 0.8571428571428571,
+    "total_tokens": 9400,
+    "tokens_per_classified_ticket": 63.945578231292515,
+    "model_calls": 156,
+    "retries": 19,
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "skipped_empty": 4,
+      "flagged_long": 4
+    },
+    "token_budget": null
+  },
+  "few_shot": {
+    "prompt": "few_shot",
+    "tickets": 164,
+    "classified": 147,
+    "accuracy_classified": 1.0,
+    "total_tokens": 12832,
+    "tokens_per_classified_ticket": 87.29251700680273,
+    "model_calls": 156,
+    "retries": 19,
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "skipped_empty": 4,
+      "flagged_long": 4
+    },
+    "token_budget": null
+  },
+  "final_few_shot": {
+    "prompt": "few_shot",
+    "tickets": 164,
+    "classified": 147,
+    "accuracy_classified": 1.0,
+    "total_tokens": 12832,
+    "tokens_per_classified_ticket": 87.29251700680273,
+    "model_calls": 156,
+    "retries": 19,
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "skipped_empty": 4,
+      "flagged_long": 4
+    },
+    "token_budget": 100000
+  },
+  "budget_demo": {
+    "prompt": "zero_shot",
+    "tickets": 164,
+    "classified": 95,
+    "accuracy_classified": 0.8421052631578947,
+    "total_tokens": 6038,
+    "tokens_per_classified_ticket": 63.55789473684211,
+    "model_calls": 100,
+    "retries": 12,
+    "status_counts": {
+      "classified_json": 88,
+      "budget_exhausted": 56,
+      "classified_keyword": 7,
+      "flagged_invalid_output": 5,
+      "skipped_empty": 4,
+      "flagged_long": 4
+    },
+    "token_budget": 6000
+  },
+  "budget_exhausted_count": 56,
+  "final_status_counts": {
+    "classified_json": 135,
+    "classified_keyword": 12,
+    "flagged_invalid_output": 9,
+    "skipped_empty": 4,
+    "flagged_long": 4
+  },
+  "final_route_counts": {
+    "support_queue": 102,
+    "security_team": 34,
+    "human_review": 17,
+    "premium_desk": 11
+  }
+}

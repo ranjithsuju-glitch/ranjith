@@ -42,6 +42,7 @@ def build_readme() -> str:
         [[key.replace("_", " ").title(), value] for key, value in quality.items()],
     )
     k_table = table(
+        ["K", "Inertia", "Silhouette"],
         [[row["k"], number(row["inertia"], 1), number(row["silhouette"], 3)] for row in b_rfm["kmeans"]],
     )
     profiles = csv_rows("segment_profile.csv")
@@ -226,7 +227,7 @@ With 10-word overlap: {d_eval['doc_hits']}/{d_eval['answerable_questions']} answ
 
 {scenario_table}
 
-The S1 token-limit demonstration ended with **{d_demo['token_limit_demo_status']}**; the zero-second timeout demonstration ended with **{d_demo['timeout_demo_status']}**. The crash-and-resume run ended with **{d_demo['crash_resume_status']}** and {d_demo['crash_resume_final_answer']}. Tools executed across both halves, in order: `{ ' -> '.join(d_demo['crash_resume_tools']) }`.
+The S1 token-limit demonstration ended with **{d_demo['token_limit_demo_status']}**; the zero-second timeout demonstration ended with **{d_demo['timeout_demo_status']}**. The crash-and-resume run ended with **{d_demo['crash_resume_status']}** and {d_demo['crash_resume_final_answer']} Tools executed across both halves, in order: `{ ' -> '.join(d_demo['crash_resume_tools']) }`.
 
 The normal ReAct run used {s1['llm_calls']} model calls for S1, {s5['llm_calls']} for S5 and {s6['llm_calls']} for S6. A plan-and-execute agent could reduce calls by proposing the whole sequence once, then replan only after an error; it would often use fewer tokens. ReAct handles unexpected observations such as `NOT_FOUND` or a cancelled order as soon as the relevant tool returns, rather than carrying out a stale plan. For refunds I prefer ReAct because each financial action should be conditioned on current database and policy evidence, and the explicit iteration/token/time limits bound the cost.
 

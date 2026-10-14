@@ -1,0 +1,159 @@
+{
+  "cohort_size": 1156,
+  "lapsed_count": 443,
+  "lapse_rate": 0.38321799307958476,
+  "train_rows": 924,
+  "test_rows": 232,
+  "feature_columns": [
+    "recency",
+    "frequency",
+    "monetary",
+    "avg_discount_pct",
+    "cancellation_rate",
+    "avg_delivery_minutes",
+    "delivery_unknown",
+    "age",
+    "tenure_days",
+    "city",
+    "gender",
+    "favourite_category"
+  ],
+  "missing_feature_cells": 0,
+  "baseline": {
+    "accuracy": 0.6163793103448276,
+    "confusion_matrix": [
+      [
+        143,
+        0
+      ],
+      [
+        89,
+        0
+      ]
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "logistic": {
+    "best_params": {
+      "model__C": 100
+    },
+    "best_cv_f1": 0.6493255162530129,
+    "test": {
+      "confusion_matrix": [
+        [
+          104,
+          39
+        ],
+        [
+          31,
+          58
+        ]
+      ],
+      "precision": 0.5979381443298969,
+      "recall": 0.651685393258427,
+      "f1": 0.6236559139784946
+    }
+  },
+  "random_forest": {
+    "best_params": {
+      "model__max_depth": 5,
+      "model__min_samples_leaf": 10
+    },
+    "best_cv_f1": 0.6858563984154825,
+    "test": {
+      "confusion_matrix": [
+        [
+          111,
+          32
+        ],
+        [
+          32,
+          57
+        ]
+      ],
+      "precision": 0.6404494382022472,
+      "recall": 0.6404494382022472,
+      "f1": 0.6404494382022472
+    }
+  },
+  "selected_model": "random_forest",
+  "selected_test": {
+    "confusion_matrix": [
+      [
+        111,
+        32
+      ],
+      [
+        32,
+        57
+      ]
+    ],
+    "precision": 0.6404494382022472,
+    "recall": 0.6404494382022472,
+    "f1": 0.6404494382022472
+  },
+  "balanced_logistic_test": {
+    "confusion_matrix": [
+      [
+        89,
+        54
+      ],
+      [
+        21,
+        68
+      ]
+    ],
+    "precision": 0.5573770491803278,
+    "recall": 0.7640449438202247,
+    "f1": 0.6445497630331753
+  },
+  "balanced_train_class_counts": {
+    "1": 570,
+    "0": 570
+  },
+  "scaler_training_mean_frequency": 8.07034632034632,
+  "full_cohort_mean_frequency": 8.028546712802768,
+  "random_forest_top_features": [
+    {
+      "feature": "numeric__frequency",
+      "importance": 0.3094686775442257
+    },
+    {
+      "feature": "numeric__monetary",
+      "importance": 0.2686619797749857
+    },
+    {
+      "feature": "numeric__recency",
+      "importance": 0.1251703329651199
+    },
+    {
+      "feature": "numeric__avg_delivery_minutes",
+      "importance": 0.060681300574874385
+    },
+    {
+      "feature": "numeric__avg_discount_pct",
+      "importance": 0.053186571720422564
+    }
+  ],
+  "logistic_coefficients": {
+    "recency": {
+      "coefficient": -0.00035555874739081245,
+      "sign": "negative"
+    },
+    "frequency": {
+      "coefficient": -1.8621905630755875,
+      "sign": "negative"
+    },
+    "monetary": {
+      "coefficient": 0.36732465461190733,
+      "sign": "positive"
+    }
+  },
+  "joblib_predictions_identical": true,
+  "retention_list_rows": 10,
+  "retention_list_lapsed": 2,
+  "premium_flag_is_posthoc": true,
+  "seed": 42
+}

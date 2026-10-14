@@ -1,0 +1,22 @@
+{
+  "run_id": "demo-timeout",
+  "scenario_id": "S1",
+  "messages": [
+    {
+      "role": "system",
+      "content": "AGENT. Use the order and policy tools as evidence. Follow the refund rules. Never invent order facts or issue an unverified refund."
+    },
+    {
+      "role": "user",
+      "content": "My order ORD-100048 reached me very late. I would like a refund."
+    }
+  ],
+  "tokens_used": 0,
+  "step_number": 0,
+  "tools_executed": [],
+  "steps": [],
+  "llm_calls": 0,
+  "max_iterations": 6,
+  "status": "FALLBACK_TIMEOUT",
+  "final_answer": "FALLBACK_TIMEOUT: hand this request to a human agent; the time limit was reached."
+}

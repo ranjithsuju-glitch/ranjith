@@ -1,0 +1,14 @@
+{
+  "token_limit_demo_status": "FALLBACK_TOKEN_LIMIT",
+  "timeout_demo_status": "FALLBACK_TIMEOUT",
+  "crash_resume_status": "REFUND",
+  "crash_resume_final_answer": "REFUND: INR 128.25 issued.",
+  "crash_resume_tools": [
+    "get_order",
+    "search_policy",
+    "calculate_refund",
+    "issue_refund"
+  ],
+  "crash_resume_llm_calls": 5,
+  "crash_resume_tokens": 869
+}
