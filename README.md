@@ -1,5 +1,7 @@
 # Instamart Customer Intelligence & Support Copilot
 
+> **Work in progress:** Part B–D numerical outputs have not been generated in this environment because Windows blocks NumPy's compiled extension. This repository is not yet a grading-ready submission; no missing metrics or output files are fabricated.
+
 ## Overview
 A single-repository synthetic-data capstone connecting trusted data, customer segmentation and lapse prediction, support triage, and policy-grounded refund recommendations. All records and policy text are fictional. No real Swiggy/Instamart data or terms are represented; monetary values are INR. `generate_data.py` and `mock_llm.py` are the supplied root files and must remain unmodified. All LLM behavior is deterministic and offline through `mock_llm.py`.
 
